@@ -2,7 +2,7 @@ package ub.com.csi142.tuckshop.services;
 
 import  java.util.ArrayList;
 import ub.com.csi142.tuckshop.products.Sale;
-//import ub.com.csi142.tuckshop.products.Item; (Waiting for the Item.java to be ready first)
+import ub.com.csi142.tuckshop.products.Item;
 
 
 public class SaleService
@@ -16,9 +16,9 @@ public class SaleService
                 this.tuckshopInventory = tuckshopInventory;
             }
       
-      public void processSale(Sale newSale, Object itemBought, int quantityBought) //Main method that handles the sell logic. Object to be replaced by Item
+      public void processSale(Sale newSale, Item itemBought, int quantityBought) //Main method that handles the sell logic. Object to be replaced by Item
             {
-              /*if(itemBought.getStockLevel() >= quantityBought)  //check if there is enough stock in the inventory.
+              if(itemBought.getStockLevel() >= quantityBought)  //check if there is enough stock in the inventory.
                 {
                     int updatedStock = itemBought.getStockLevel() - quantityBought; //We subtract the bought amount from the item's current stock
                     itemBought.setStockLevel(updatedStock);
@@ -37,8 +37,22 @@ public class SaleService
                 System.out.println("---Total Sale History---");
                        for(Sale s : saleHistory)
                           {
-                            System.out.println(s.displaySale())
+                            s.displaySale();
                           }
-            */}          
+            } 
+      
+      public static void main(String[] args) 
+            {
+    // 1. Create a snack
+              Item chips = new Item("Lays Salt & Vinegar", 15.50, 20);
+    
+              System.out.println("Before sale: " + chips);
+
+    // 2. Pretend to sell 5 bags
+              chips.reduceStock(5);
+
+    // 3. See the result
+              System.out.println("After sale: " + chips);
+            }      
     
 }
