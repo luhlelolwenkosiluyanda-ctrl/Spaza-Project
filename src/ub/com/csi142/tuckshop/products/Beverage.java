@@ -1,7 +1,12 @@
 package ub.com.csi142.tuckshop.products;
 
 public class Beverage extends Item{
-  public Beverage(String name, double price, int quantity, int id){
-    super(name, price, quantity, id)
+  private String id;
+  
+  public Beverage(String name, double price, int quantity, String id){
+    super(name, price, quantity);
+    this.id = id;
   }
+  @Override 
+  
 }
