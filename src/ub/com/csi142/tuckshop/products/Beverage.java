@@ -7,6 +7,13 @@ public class Beverage extends Item{
     super(name, price, quantity);
     this.id = id;
   }
+  
+    public string getID(){
+      return id;
+    }
+  
   @Override 
+  public string describeItem(){
+    return "Drink details: " + getName() + " || P" + getPrice() + " || " + getQuantity() + " units || ID: " +  getID();
   
 }
