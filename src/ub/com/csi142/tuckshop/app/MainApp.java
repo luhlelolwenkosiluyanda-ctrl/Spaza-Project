@@ -24,21 +24,56 @@ public class MainApp {
                 case 1:
                     // Call inventory.displayDetails()
                     System.out.println("Displaying Inventory...");
+                    System.out.println("\n--Current Inventory--");
+                    if (inventory.isEmpty) {
+                        System.out.println("Inventory is empty");
+                    } else {
+                        for (Item item : Inventory) {
+                            item.displayDetails();
+                        }
+                    }
                     break;
                 case 2:
                     System.out.println("\n---Add New Item---");
-                    String itemName = InputValidator.getNoneEmptyString("Enter item name: ";
-                    double itemPrice = InputValidator.getValidPrice("Enter item price: P");
-                    int itemStock = InputValidator.getValidInt("Enter stock level: ");
+                    String name = InputValidator.getNoneEmptyString("Enter item name: ");
+                    double price = InputValidator.getValidPrice("Enter item price: P");
+                    int quantity = InputValidator.getValidInt("Enter quantity level: ");
                     //Logic to create a new Item
-                    Item newItem = new Item(itemName, itemPrice, itemStock);
-                    System.out.println("--Successfully added " + itemName + "into system!");
+                    Item newItem = new Item(name, price, quantity);
+                    System.out.println("--Successfully added " +  name + "into system!");
+                    Inventory.add(newItem);
                     break;
                 case 3:
                     // Logic to find product and reduce quantity
+                    System.out.println("Enter sale: ");
+                    String saleItem = input.next();
+
+                    for (Item item : Inventory) {
+                        if (item.getName().IgnoreCase()) {
+                            found = true;
+                            System.out.println("Enter quantity: ");
+                            int qty = InputValidator.getValidInput("");
+
+                            if (item.getStock() >= qty) {
+                                item.reduceStock(qty);
+                                double cost = item.getPrice() * qty;
+                                totalRevenue += cost;
+                                System.out.println("Sale successful! Total: P" + cost);
+                            } else {
+                                System.out.println("Error: Not enough stock.");
+                            }
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        System.out.println("Item not found.");
+                    }
                     break;
                 case 4:
-                    // Logic to iterate through saleSummary
+                    /* Logic to iterate through saleSummary
+                    System.out.println("\n---Sales Summary---");
+                    System.out.println("Total Sales Made: P" + totalSales);
+                    */
                     break;
                 case 5:
                     running = false;
