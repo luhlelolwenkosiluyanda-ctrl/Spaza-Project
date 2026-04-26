@@ -1,6 +1,6 @@
 
 package com.ub.csi142.tuckshop;
-
+import ub.com.csi142.tuckshop.utils.InputValidator;
 import java.util.Scanner;
 
 public class MainApp {
@@ -18,15 +18,21 @@ public class MainApp {
             System.out.println("4. View Sales Summary");
             System.out.println("5. Exit");
             System.out.print("Select an option: ");
-
-            int choice = input.nextInt();
-
+            
+            int choice = InputValidator.getValidInt("Select an option: ");
             switch (choice) {
                 case 1:
                     // Call inventory.displayDetails()
+                    System.out.println("Displaying Inventory...");
                     break;
                 case 2:
-                    // Logic to create a new Item object
+                    System.out.println("\n---Add New Item---");
+                    String itemName = InputValidator.getNoneEmptyString("Enter item name: ";
+                    double itemPrice = InputValidator.getValidPrice("Enter item price: P");
+                    int itemStock = InputValidator.getValidInt("Enter stock level: ");
+                    //Logic to create a new Item
+                    Item newItem = new Item(itemName, itemPrice, itemStock);
+                    System.out.println("--Successfully added " + itemName + "into system!");
                     break;
                 case 3:
                     // Logic to find product and reduce quantity
