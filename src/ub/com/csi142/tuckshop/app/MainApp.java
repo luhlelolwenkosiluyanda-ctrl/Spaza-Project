@@ -3,7 +3,7 @@ package com.ub.csi142.tuckshop;
 
 import java.util.Scanner;
 
-public class TuckshopApp {
+public class MainApp {
 
     public static void main(String[] args) {
 
