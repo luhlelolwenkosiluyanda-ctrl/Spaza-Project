@@ -53,6 +53,5 @@ public class SaleService
 
     // 3. See the result
               System.out.println("After sale: " + chips);
-            }      
-    
+            }  
 }
