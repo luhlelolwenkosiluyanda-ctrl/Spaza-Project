@@ -1,3 +1,5 @@
+package ub.com.csi142.tuckshop.products;
+
 public class Snack extends Item{
     private String id;
 
