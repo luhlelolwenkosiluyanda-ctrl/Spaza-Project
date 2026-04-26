@@ -24,7 +24,7 @@ public class InputValidator
                     }
                      return value;
                 } 
-            catch (NumberFormatException e) 
+            catch (NumberFormatException exception) 
                     {
                       System.out.println("Error: Invalid input. Please enter a numeric price (e.g 18.50).");
                     }
@@ -44,7 +44,7 @@ public class InputValidator
                     continue;
                 }
                 return value;
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException exception) {
                 System.out.println("Error: Please enter a whole number.");
             }
         }
