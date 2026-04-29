@@ -3,12 +3,12 @@ package ub.com.csi142.tuckshop.products;
 public abstract class Item{
     private String name;
     private double price;
-    private int quantity;
+    private int stockLevel;
 
-    public Item(String name, double price, int quantity) {
+    public Item(String name, double price, int stockLevel) {
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
+        this.stockLevel = stockLevel;
     }
 
     public String getName() {
@@ -19,12 +19,22 @@ public abstract class Item{
         return price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getStockLevel() {
+        return stockLevel;
+    }
+    
+     public void setStockLevel(int stockLevel) 
+    {
+       this.stockLevel = stockLevel;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    // Logic to reduce stock when a sale happens
+    public void reduceStock(int quantity) {
+        if (quantity <= stockLevel) {
+            this.stockLevel -= quantity;
+        } else {
+            System.out.println("Error: Not enough " + name + " in stock!");
+        }
     }
 
     public abstract String describeItem();
