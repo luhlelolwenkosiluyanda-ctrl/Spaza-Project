@@ -3,8 +3,8 @@ package ub.com.csi142.tuckshop.products;
 public class Beverage extends Item{
   private String id;
   
-  public Beverage(String name, double price, int quantity, String id){
-    super(name, price, quantity);
+  public Beverage(String name, double price, int stockLevel, String id){
+    super(name, price, stockLevel);
     this.id = id;
   }
   
@@ -14,6 +14,6 @@ public class Beverage extends Item{
   
   @Override 
   public string describeItem(){
-    return "Drink details: " + getName() + " || P" + getPrice() + " || " + getQuantity() + " units || ID: " +  getID();
+    return "Drink details: " + getName() + " || P" + getPrice() + " || " + getStockLevel() + " units || ID: " +  getID();
   
 }
