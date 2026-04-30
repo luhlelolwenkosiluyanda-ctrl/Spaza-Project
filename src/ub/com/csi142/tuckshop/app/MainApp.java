@@ -38,26 +38,17 @@ public class MainApp {
                     System.out.println("--Successfully added item into the system!");
                     break;
                 case 3:
-                    // Logic to find product and reduce quantity.
+                    /*
                     System.out.println("Enter item name: ");
                     String saleItem = input.next();
                     System.out.println("Enter quantity: ");
                     int saleQty = InputValidator.getValidInt("");
+                    */
 
-                    boolean success = inventory.processSale(saleName, saleQty);
-
-                    if (success) {
-                        double itemPrice = inventory.getItemPrice(saleName);
-                        totalSales += (itemPrice * saleQty);
-                        System.out.println("Sale Recorded!");
-                    } else {
-                        System.out.println("Sale failed: Item not found or insufficient stock");
-                    }
+                    processSale();
                     break;
                 case 4:
-                    // Logic to iterate through saleSummary.
-                    System.out.println("\n---Sales Summary---");
-                    System.out.println("Total Sales Made: P" + totalSales());
+                    printAllSales();
                     break;
                 case 5:
                     running = false;
