@@ -6,7 +6,7 @@ public Class Inventory {
 
         private ArrayList<Item> items = new ArrayList<>();
     
-    public void addProduct(Item item) {
+    public void addItem(Item item) {
         items.add(item);
     }
     public void displayDetails() {
