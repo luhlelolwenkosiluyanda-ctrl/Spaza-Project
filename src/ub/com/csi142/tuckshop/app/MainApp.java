@@ -25,11 +25,8 @@ public class MainApp {
                     // Call inventory.displayDetails().
                     System.out.println("Displaying Inventory...");
                     System.out.println("\n--Current Inventory--");
-                    if (inventory.isEmpty) {
-                        System.out.println("Inventory is empty");
-                    } else {
-                        inventory.displayItems();
-                    }
+                    Inventory.displayItems();
+                    
                     break;
                 case 2:
                     System.out.println("\n---Add New Item---");
