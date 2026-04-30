@@ -34,9 +34,8 @@ public class MainApp {
                     double price = InputValidator.getValidPrice("Enter item price: P");
                     int qty = InputValidator.getValidInt("Enter quantity: ");
                     //Logic to create a new item.
-                    Item newItem = new Item(name, price, quantity);
-                    Inventory.add(newItem);
-                    System.out.println("--Successfully added " +  name + "into system!");
+                    Inventory.addItem();
+                    System.out.println("--Successfully added item into the system!");
                     break;
                 case 3:
                     // Logic to find product and reduce quantity.
