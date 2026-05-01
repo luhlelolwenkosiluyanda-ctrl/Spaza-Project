@@ -1,4 +1,4 @@
-package ub.com.csi142.tuckshop.service;
+package ub.com.csi142.tuckshop.services;
 
 import  java.util.ArrayList;
 
