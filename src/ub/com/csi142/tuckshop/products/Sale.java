@@ -1,4 +1,3 @@
-
 package ub.com.csi142.tuckshop.productsl;
 
 public class Sale {
