@@ -1,7 +1,7 @@
 
 package ub.com.csi142.tuckshop.app;
-import ub.com.csi142.tuckshop.service.Inventory;
-import ub.com.csi142.tuckshop.service.SalesService;
+import ub.com.csi142.tuckshop.services.Inventory;
+import ub.com.csi142.tuckshop.services.SalesService;
 import ub.com.csi142.tuckshop.utils.InputValidator;
 import java.util.Scanner;
 import ub.com.csi142.tuckshop.products.Item;
