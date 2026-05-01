@@ -1,3 +1,6 @@
+ Luyanda.b
+
+
 package ub.com.csi142.tuckshop.app;
 import ub.com.csi142.tuckshop.service.Inventory;
 import ub.com.csi142.tuckshop.service.SalesService;
@@ -84,3 +87,4 @@ public class MainApp {
         }
     }
 }
+ main
