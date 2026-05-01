@@ -1,4 +1,4 @@
-package ub.com.csi142.tuckshop.productsl;
+package ub.com.csi142.tuckshop.products;
 
 public class Sale {
     private  Item item;
