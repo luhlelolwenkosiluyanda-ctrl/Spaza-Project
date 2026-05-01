@@ -1,3 +1,4 @@
+package ub.com.csi142.tuckshop.products;
 public abstract class Item{
     private String name;
     private double price;
