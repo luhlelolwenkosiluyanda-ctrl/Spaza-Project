@@ -1,5 +1,5 @@
  Luyanda.b
-
+ bapheleledlamini-patch-1
 
 package ub.com.csi142.tuckshop.app;
 import ub.com.csi142.tuckshop.service.Inventory;
@@ -87,4 +87,5 @@ public class MainApp {
         }
     }
 }
+ main
  main
