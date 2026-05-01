@@ -8,12 +8,13 @@ public class Beverage extends Item{
     this.id = id;
   }
   
-    public string getID(){
+    public String getID(){
       return id;
     }
   
   @Override 
-  public string describeItem(){
+  public String toString(){
     return "Drink details: " + getName() + " || P" + getPrice() + " || " + getStockLevel() + " units || ID: " +  getID();
   
+}
 }
