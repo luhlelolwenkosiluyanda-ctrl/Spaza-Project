@@ -1,5 +1,5 @@
-package ub.com.csi142.tuckshop.products;
 
+ bapheleledlamini-patch-1
 public abstract class Item{
     private String name;
     private double price;
@@ -42,3 +42,5 @@ public abstract class Item{
 
   
 }
+
+ main
