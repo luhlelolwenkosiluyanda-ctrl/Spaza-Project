@@ -2,9 +2,8 @@ package ub.com.csi142.tuckshop.utils;
 
 import java.util.Scanner;
 
-public class InputValidator 
-{
-    private static Scanner scanner = new Scanner(System.in);
+public class InputValidator {
+      private static Scanner scanner = new Scanner(System.in);
 
     /**
      * Ensures the user enters a valid decimal number (Price).
@@ -64,7 +63,16 @@ public class InputValidator
                 System.out.println("Error: This field cannot be left blank.");
                 continue;
                 }
+                try
+                {
+                    Double.parseDouble(input);
+                    System.out.println("Error: Item name cannot be a number, use letters");
+                }
+                catch(NumberFormatException exception)
+                {
                   return input;
            }
+    
+        }
     }
 }
