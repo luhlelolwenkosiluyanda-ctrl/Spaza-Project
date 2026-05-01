@@ -37,7 +37,7 @@ public abstract class Item{
         }
     }
 
-    public abstract String describeItem();
+    public abstract String toString();
 
 
   
