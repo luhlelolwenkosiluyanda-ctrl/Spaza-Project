@@ -1,6 +1,3 @@
- Luyanda.b
- bapheleledlamini-patch-1
-
 package ub.com.csi142.tuckshop.app;
 import ub.com.csi142.tuckshop.service.Inventory;
 import ub.com.csi142.tuckshop.service.SalesService;
@@ -20,7 +17,7 @@ public class MainApp {
         SalesService salesService = new SalesService(inventory);
         Item item1 = new Snack("Chips", 10.00, 50, null);
 
-         inventory.defaultData(); // Seed the inventory with default items
+         inventory.defaultData();
         
         while (running) {
             
@@ -53,7 +50,7 @@ public class MainApp {
                     double price = InputValidator.getValidPrice("Enter item price: P");
                     int qty = InputValidator.getValidInt("Enter quantity: ");
 
-                    Item newItem = new Snack(name, price, qty, null); // ✅ create new object
+                    Item newItem = new Snack(name, price, qty, null); // create new object
                     inventory.addItem(newItem);
 
     System.out.println("--Successfully added item into the system!");
@@ -64,7 +61,7 @@ public class MainApp {
                     String saleItemName = InputValidator.getNonEmptyString("Enter item name: ");
                     int saleQty = InputValidator.getValidInt("Enter quantity: ");
 
-                    Item item = inventory.findItemByName(saleItemName); // you need this method
+                    Item item = inventory.findItemByName(saleItemName);
                     Sale newSale = new Sale(item, saleQty); // create a new Sale object
 
                     if (item != null) {
@@ -87,5 +84,4 @@ public class MainApp {
         }
     }
 }
- main
- main
+
